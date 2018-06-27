@@ -1,0 +1,189 @@
+<script>
+    var foodCategories = ["Appetizers", "Salads", "Sandwiches", "Entrees", "Desserts"]
+</script>
+
+<body>
+<button onclick="showContentType('food')">Food</button>
+<button onclick="showContentType('beer')">Beer</button>
+<button onclick="showContentType('drinks')">Drinks</button>
+<button onclick="showContentType('specials')">Specials</button>
+
+<div id="food">
+    <button onclick="showFoodType('appetizers')">Appetizers</button><br>
+    <button onclick="showFoodType('salads/sandwiches')">Salads and Sandwiches</button><br>
+    <button onclick="showFoodType('entrees')">Entrees</button><br>
+    <button onclick="showFoodType('desserts')">Desserts</button>
+
+    <div id="appetizers">
+        <h3>Charcuterie Plate</h3>
+        <h5>Cured meats and aged cheeses served with gourmet crackers, fruits and nuts</h5>
+
+        <h3>Stone's Throw Onion Rings</h3>
+        <h5>Beer battered onions made with Fargo Brewing Company's Stone's Throw Scottish Ale</h5>
+
+        <h3>Falafel Appetizer</h3>
+        <h5>House-made falafels served with cucumber slices and a choice of cucumber mint or spicy yogurt sauces</h5>
+
+        <h3>Tempura Vegetables</h3>
+        <h5>Hand-cut vegetables fried in a tempura batter served with a light ginger sauce</h5>
+
+        <h3>Spanish Fries</h3>
+        <h5>Hand-cut potatoes fried and seasoned with smoked paprika served with aioli</h5>
+    </div>
+
+    <div id="salads/sandwiches">
+        <h3>Avocado Toast Points</h3>
+        <h5>Toasted bread topped with avocado slices and Za'atar seasoning</h5>
+
+        <h3>Roasted Beet Salad</h3>
+        <h5>Roasted red and gold beets with mixed greens, toasted walnuts, feta, and strawberries,
+            served with a cardamom sunflower oil dressing</h5>
+
+        <h3>Chicken Philly</h3>
+        <h5>Chopped chicken thigh and Italian sausages tossed with onions and sweet peppers and sauteed in a
+            white wine then topped with meulted smoked gouda in a toasted baguette. Served with a choice of house
+            fries, wilted greens, or sauteed fresh.</h5>
+
+        <h3>Prairie Sandwich</h3>
+        <h5>Generous layers of greens, cucumber, bean sprouts, mini bell peppers, drizzled with a lemon
+            basil vinaigrette and finished with an onion ring in a baguette. Served with a choice of house fries,
+            wilted greens, or sauteed fresh vegetables.</h5>
+
+        <h3>Grass-Fed hamburger</h3>
+        <h5>Hand-formed 5oz patties. Served on a Brioche with lettuce and tomato.
+            Served with a choice of house fries, wilted greens, or sauteed fresh vegetables.</h5>
+    </div>
+
+    <div id="entrees">
+        <h3>Ribeye Steak</h3>
+        <h5>We hand cut and trim each 12 ox. ribeye steak from the tenderloin and
+            cook to temperature on a cast iron skillet. Served with lemon new potatoes and
+            choice of wilted greens or sauteed fresh vegetables</h5>
+
+        <h3>Rack of Lamb</h3>
+        <h5>A rack of lamb cut into four bone-in medallios accompanies by a
+            tattersall cranberry demi-glace, served with sauteed fresh vegetables and lemon new potatoes.</h5>
+    </div>
+
+    <div id="desserts">
+        <h3>Flourless Chocolate Torte</h3>
+        <h3>Almond Cake</h3>
+        <h3>Buttermilk Pie with a fruit glaze</h3>
+        <h3>Rhubarb Custard Pie ala Mode</h3>
+    </div>
+</div>
+
+<div id="beer">
+    <button onclick="showBeerType('brews')">Brews</button><br>
+    <button onclick="showBeerType('light been')">Light Beer</button><br>
+    <button onclick="showBeerType('on top')">On Tap</button>
+
+    <div id="brews">
+        <h3>300th Mosaic IPA- Fulton Brewing</h3>
+        <h5>ABV 7% IBU 74 <br>
+        Brewed with a base a pilsner malt and heavily hopped with Mosaic</h5>
+
+        <h3>Big Wave Golden Ale- Kona Brewing</h3>
+        <h5>ABV 4.4% IBU 21<br>
+        Big Wave is a lighter-bodied golden ale with a tropical hop aroma and flavor-smooth, easy drinking, and refreshing.</h5>
+
+        <h3>Bold and Hoppy IPA- Omission Brewing Co</h3>
+        <h5>ABV 6.7% IBU 65<br>
+        Pacific Northwest hops give it notable pine, citrus, and grapefruit aromas and flavors. The bitterness is what
+            you would expect of a NW IPA, but this beer is balanced and smooth due to the perfect level of malt sweetness.
+            The finish is crisp, clean, and refreshing-it's a true IPA lover's IPA</h5>
+
+        <h3>Brown Ale- Newcastle</h3>
+        <h5>ABV 4.7% IBU 18<br>
+        newcastle Brown Ale is brewed with a unique blend of a pale malt and darker caramel malt to give its
+            smooth, characteristic flavour and colour.</h5>
+
+        <h3>Buffalo Sweat OCS- Tallgrass Brewing Co.</h3>
+        <h5>ABV 5% IBU 14<br>
+        Buffalo Sweat has a rich taste, creamy mouth feel and sweet, lingering finish as
+            liquid chocolate chip cookies made with espresso.</h5>
+    </div>
+
+</div>
+
+<div id="drinks">
+    I IS DRANKS
+</div>
+
+<div id="specials">
+    I IS SPECIALS
+</div>
+
+</body>
+
+<script>
+    document.getElementById("food").style.display = "block";
+    document.getElementById("beer").style.display = "none";
+    document.getElementById("drinks").style.display = "none";
+    document.getElementById("specials").style.display = "none";
+
+   function showContentType(type){
+       if(type === "food"){
+           document.getElementById("food").style.display = "block";
+           document.getElementById("beer").style.display = "none";
+           document.getElementById("drinks").style.display = "none";
+           document.getElementById("specials").style.display = "none";
+       }
+
+       if(type === "beer"){
+           document.getElementById("food").style.display = "none";
+           document.getElementById("beer").style.display = "block";
+           document.getElementById("drinks").style.display = "none";
+           document.getElementById("specials").style.display = "none";
+       }
+
+       if(type === "drinks"){
+           document.getElementById("food").style.display = "none";
+           document.getElementById("beer").style.display = "none";
+           document.getElementById("drinks").style.display = "block";
+           document.getElementById("specials").style.display = "none";
+       }
+
+       if(type === "specials"){
+           document.getElementById("food").style.display = "none";
+           document.getElementById("beer").style.display = "none";
+           document.getElementById("drinks").style.display = "none";
+           document.getElementById("specials").style.display = "block";
+       }
+    }
+
+    document.getElementById("appetizers").style.display = "block";
+    document.getElementById("salads/sandwiches").style.display = "none";
+    document.getElementById("entrees").style.display = "none";
+    document.getElementById("desserts").style.display = "none";
+
+    function showFoodType(type){
+        if(type === "appetizers"){
+            document.getElementById("appetizers").style.display = "block";
+            document.getElementById("salads/sandwiches").style.display = "none";
+            document.getElementById("entrees").style.display = "none";
+            document.getElementById("desserts").style.display = "none";
+        }
+
+        if(type === "salads/sandwiches"){
+            document.getElementById("appetizers").style.display = "none";
+            document.getElementById("salads/sandwiches").style.display = "block";
+            document.getElementById("entrees").style.display = "none";
+            document.getElementById("desserts").style.display = "none";
+        }
+
+        if(type === "entrees"){
+            document.getElementById("appetizers").style.display = "none";
+            document.getElementById("salads/sandwiches").style.display = "none";
+            document.getElementById("entrees").style.display = "block";
+            document.getElementById("desserts").style.display = "none";
+        }
+
+        if(type === "desserts"){
+            document.getElementById("appetizers").style.display = "none";
+            document.getElementById("salads/sandwiches").style.display = "none";
+            document.getElementById("entrees").style.display = "none";
+            document.getElementById("desserts").style.display = "block";
+        }
+    }
+</script>
